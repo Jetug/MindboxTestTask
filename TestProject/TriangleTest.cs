@@ -13,14 +13,14 @@ namespace TestProject
         [TestMethod]
         public void TestTriangle()
         {
-            Triangle triangle = new Triangle(a, b, c);
+            Triangle triangle = new(a, b, c);
             Assert.AreEqual(6, triangle.Area);
         }
 
         [TestMethod]
         public void TestIsRight()
         {
-            Triangle triangle = new Triangle(a, b, c);
+            Triangle triangle = new(a, b, c);
             Assert.IsTrue(triangle.IsRightTriange);
         }
 

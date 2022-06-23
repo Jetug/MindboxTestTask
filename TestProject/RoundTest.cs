@@ -10,12 +10,12 @@ namespace TestProject
     [TestClass]
     public class RoundTest
     {
-        double radius = 1;
+        const double radius = 1;
 
         [TestMethod]
         public void TestArea()
         {
-            Round round = new Round(radius);
+            Round round = new(radius);
             Assert.AreEqual(Math.PI, round.Area);
             Assert.AreNotEqual(radius, round.Area);
         }
