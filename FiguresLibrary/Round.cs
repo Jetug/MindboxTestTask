@@ -8,7 +8,7 @@ namespace FiguresLibrary
 {
     public class Round : IFigure
     {
-        public double Radius { get; init; }
+        public double Radius { get; }
 
         public Round(double radius)
         {
@@ -18,6 +18,6 @@ namespace FiguresLibrary
             Radius = radius; 
         }
 
-        public double Area => Math.PI * Radius * Radius;
+        public double Area => Math.PI * Math.Pow(Radius, 2);
     }
 }

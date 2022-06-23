@@ -8,9 +8,9 @@ namespace FiguresLibrary
 {
     public class Triangle : IFigure
     {
-        public double SideA { get; init; }
-        public double SideB { get; init; }
-        public double SideC { get; init; }
+        public double SideA { get; }
+        public double SideB { get; }
+        public double SideC { get; }
 
         public Triangle(double sideA, double sideB, double sideC)
         {
@@ -35,8 +35,7 @@ namespace FiguresLibrary
         private double GetArea()
         {
             double p = (SideA + SideB + SideC) / 2;
-            double s = Math.Sqrt(p * (p - SideA) * (p - SideB) * (p - SideC));
-            return s;
+            return Math.Sqrt(p * (p - SideA) * (p - SideB) * (p - SideC));
         }
     }
 }
