@@ -15,7 +15,7 @@ namespace FiguresLibrary
         public Triangle(double sideA, double sideB, double sideC)
         {
             if (sideA < 0 || sideB < 0 || sideC < 0)
-                throw new Exception("Длина сторон не может быть меньше нуля");
+                throw new ArgumentException("Длина сторон не может быть меньше нуля");
 
             SideA = sideA;
             SideB = sideB;

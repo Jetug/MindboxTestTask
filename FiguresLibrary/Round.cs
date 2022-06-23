@@ -13,7 +13,7 @@ namespace FiguresLibrary
         public Round(double radius)
         {
             if (radius < 0)
-                throw new Exception("Радиус не может быть меньше нуля");
+                throw new ArgumentException("Радиус не может быть меньше нуля");
 
             Radius = radius; 
         }
