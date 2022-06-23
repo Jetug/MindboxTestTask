@@ -12,7 +12,10 @@ namespace FiguresLibrary
 
         public Round(double radius)
         {
-            Radius = radius;
+            if (radius < 0)
+                throw new Exception("Радиус не может быть меньше нуля");
+
+            Radius = radius; 
         }
 
         public double Area => Math.PI * Radius * Radius;

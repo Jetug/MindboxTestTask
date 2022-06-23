@@ -1,4 +1,4 @@
-using System.Text;
+
 using FiguresLibrary;
 
 namespace TestProject
@@ -16,12 +16,9 @@ namespace TestProject
         [TestMethod]
         public void TestTriangle()
         {
-            Triangle triangle1 = new Triangle(3, 4, 5);
-            Assert.AreEqual(6, triangle1.Area);
-
-            var hypotenuse = Math.Sqrt(3 * 3 + 2 * 2);
-            Triangle triangle2 = new Triangle(3, 2, hypotenuse);
-            Assert.IsTrue(triangle2.IsRightTriange);
+            Triangle triangle = new Triangle(3, 4, 5);
+            Assert.AreEqual(6, triangle.Area);
+            Assert.IsTrue(triangle.IsRightTriange);
         }
     }
 }
